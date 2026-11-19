@@ -893,3 +893,135 @@ footer a {
     }
 
 }
+/* =================================
+   SUMANA TRAVELS - NEW DESTINATIONS
+================================= */
+
+#more-destinations {
+    background: linear-gradient(135deg, #eef5ff, #fff9ed);
+    padding: 65px 7%;
+}
+
+#more-destinations h2 {
+    color: #102a43;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.destinations-subtitle {
+    color: #52616f;
+    max-width: 750px;
+    margin: 0 auto 35px;
+    font-size: 15px;
+}
+
+.explore-container {
+    max-width: 1150px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    text-align: left;
+}
+
+.explore-card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 15px;
+    border: 1px solid #e4eaf2;
+    border-top: 4px solid #d4a437;
+    box-shadow: 0 6px 20px rgba(16,42,67,0.08);
+    transition: 0.3s ease;
+}
+
+.explore-card:hover {
+    transform: translateY(-6px);
+    border-top-color: #1769aa;
+    box-shadow: 0 12px 28px rgba(16,42,67,0.14);
+}
+
+.explore-card h3 {
+    color: #123c66;
+    font-size: 19px;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e8edf3;
+}
+
+.explore-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.explore-card li {
+    color: #52616f;
+    font-size: 14px;
+    padding: 9px 5px;
+    border-bottom: 1px dashed #e5eaf0;
+    transition: 0.2s;
+}
+
+.explore-card li::before {
+    content: "✦";
+    color: #d4a437;
+    margin-right: 10px;
+}
+
+.explore-card li:last-child {
+    border-bottom: none;
+}
+
+.explore-card li:hover {
+    color: #1769aa;
+    padding-left: 12px;
+}
+
+/* IMAGE CARD EFFECTS */
+
+.destination-card img,
+.package-card img {
+    transition: transform 0.4s ease;
+}
+
+.destination-card:hover img,
+.package-card:hover img {
+    transform: scale(1.03);
+}
+
+/* BUTTON DESIGN */
+
+button,
+.package-card a {
+    border-radius: 25px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    #more-destinations {
+        padding: 45px 5%;
+    }
+
+    #more-destinations h2 {
+        font-size: 25px;
+    }
+
+    .explore-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .explore-card {
+        padding: 22px 18px;
+    }
+
+    .explore-card h3 {
+        font-size: 17px;
+    }
+
+    .explore-card li {
+        font-size: 13px;
+    }
+}
