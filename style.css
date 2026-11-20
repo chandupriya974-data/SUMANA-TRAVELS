@@ -1236,7 +1236,54 @@ button,
         row-gap: 30px !important;
         gap: 30px !important;
     }
+/* DESTINATION DETAILS */
+.destination-details-card {
+    background: #ffffff;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 850px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
 
+.destination-details-card h3 {
+    color: #102A43;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.destination-details-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.destination-details-card li {
+    background: #f3f7fa;
+    color: #263238;
+    padding: 13px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.destination-details-card a {
+    display: inline-block;
+    background: #FFD166;
+    color: #102A43;
+    padding: 13px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.destination-details-card a:hover {
+    background: #f2bd42;
+}
+
+.destination-card {
+    cursor: pointer;
+}
     #temple-gallery .temple-photo-card {
         margin-bottom: 25px !important;
     }
