@@ -228,72 +228,61 @@
     </section>
 
 
-    <!-- DESTINATIONS SECTION -->
-    <section id="destinations">
+  <!-- DESTINATIONS SECTION -->
+<section id="destinations">
 
-        <span class="section-tag">EXPLORE WITH US</span>
+    <span class="section-tag">EXPLORE WITH US</span>
 
-        <h2>Popular Destinations</h2>
+    <h2>Explore Places to Visit</h2>
 
-        <p>
-            Discover beautiful cities and spiritual destinations
-            with SUMANA TRAVELS.
-        </p>
+    <p>
+        Choose your destination and discover
+        beautiful places with SUMANA TRAVELS.
+    </p>
 
-        <div class="destination-container">
+    <div class="destination-container">
 
-            <div class="destination-card">
-                <img
-                    src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600"
-                    alt="Tirupati">
-                <h3>Tirupati</h3>
-                <p>Explore the spiritual beauty of Tirupati.</p>
-            </div>
-
-            <div class="destination-card">
-                <img
-                    src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?w=600"
-                    alt="Tirumala">
-                <h3>Tirumala</h3>
-                <p>Experience a memorable spiritual journey.</p>
-            </div>
-
-            <div class="destination-card">
-                <img
-                    src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600"
-                    alt="Kanipakam">
-                <h3>Kanipakam</h3>
-                <p>Visit the famous Vinayaka Temple.</p>
-            </div>
-
-            <div class="destination-card">
-                <img
-                    src="https://www.lifeberrys.com/img/article/srikalahasti-temple--andhra-1690306333-lb.jpg"
-                    alt="Srikalahasti">
-                <h3>Srikalahasti</h3>
-                <p>Discover the famous Shiva Temple.</p>
-            </div>
-
-            <div class="destination-card">
-                <img
-                    src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?w=600"
-                    alt="Chennai">
-                <h3>Chennai</h3>
-                <p>Plan your next outstation journey to Chennai.</p>
-            </div>
-
-            <div class="destination-card">
-                <img
-                    src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=600"
-                    alt="Bangalore">
-                <h3>Bangalore</h3>
-                <p>Travel conveniently to Bangalore.</p>
-            </div>
-
+        <div class="destination-card"
+             onclick="showPlaces('bangalore')">
+            <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=600"
+                 alt="Bangalore">
+            <h3>Bangalore</h3>
+            <p>Discover the Garden City.</p>
+            <span>Explore Places →</span>
         </div>
 
-    </section>
+        <div class="destination-card"
+             onclick="showPlaces('chennai')">
+            <img src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?w=600"
+                 alt="Chennai">
+            <h3>Chennai</h3>
+            <p>Explore the beauty of Chennai.</p>
+            <span>Explore Places →</span>
+        </div>
 
+        <div class="destination-card"
+             onclick="showPlaces('tirupati')">
+            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600"
+                 alt="Tirupati">
+            <h3>Tirupati</h3>
+            <p>Discover temples and attractions.</p>
+            <span>Explore Places →</span>
+        </div>
+
+        <div class="destination-card"
+             onclick="showPlaces('tirumala')">
+            <img src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?w=600"
+                 alt="Tirumala">
+            <h3>Tirumala</h3>
+            <p>Experience a spiritual journey.</p>
+            <span>Explore Places →</span>
+        </div>
+
+    </div>
+
+    <div id="destination-details"></div>
+
+</section>
 <!-- MORE DESTINATIONS SECTION -->
 <section id="more-destinations">
 
@@ -931,6 +920,86 @@
 
         }
 
+        function showPlaces(city) {
+    const details = document.getElementById("destination-details");
+
+    const destinations = {
+        bangalore: {
+            name: "Places to Visit in Bangalore",
+            places: [
+                "Lalbagh Botanical Garden",
+                "Cubbon Park",
+                "Bangalore Palace",
+                "Nandi Hills",
+                "Wonderla"
+            ]
+        },
+
+        chennai: {
+            name: "Places to Visit in Chennai",
+            places: [
+                "Marina Beach",
+                "Kapaleeshwarar Temple",
+                "Santhome Basilica",
+                "Mahabalipuram",
+                "VGP Marine Kingdom"
+            ]
+        },
+
+        tirupati: {
+            name: "Places to Visit in Tirupati",
+            places: [
+                "Sri Govindaraja Swamy Temple",
+                "Kapila Theertham",
+                "ISKCON Temple",
+                "Sri Venkateswara Zoological Park",
+                "Srinivasa Mangapuram Temple"
+            ]
+        },
+
+        tirumala: {
+            name: "Places to Visit in Tirumala",
+            places: [
+                "Sri Venkateswara Temple",
+                "Papavinasanam",
+                "Akasa Ganga",
+                "Silathoranam",
+                "Srivari Padalu",
+                "Japali Hanuman Temple"
+            ]
+        }
+    };
+
+    const selected = destinations[city];
+
+    if (!selected) return;
+
+    const placesList = selected.places
+        .map(place => <li>${place}</li>)
+        .join("");
+
+    const message = encodeURIComponent(
+        "Hello SUMANA TRAVELS, I would like to book a trip to " +
+        city.charAt(0).toUpperCase() + city.slice(1) + "."
+    );
+
+    details.innerHTML = `
+        <div class="destination-details-card">
+            <h3>${selected.name}</h3>
+            <ul>${placesList}</ul>
+            <a href="https://wa.me/917207131929?text=${message}"
+               target="_blank" rel="noopener">
+                Book This Trip on WhatsApp
+            </a>
+        </div>
+    `;
+
+    details.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
+        
     </script>
 
 </body>
