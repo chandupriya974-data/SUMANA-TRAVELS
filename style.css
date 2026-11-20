@@ -1334,3 +1334,11 @@ button,
         gap: 22px;
     }
 }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+#booking {
+    scroll-margin-top: 100px;
+}
