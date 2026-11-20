@@ -824,7 +824,6 @@
 
     </section>
 
-
     <!-- FOOTER -->
     <footer>
 
@@ -875,133 +874,112 @@
         💬
     </a>
 
-
     <!-- BOOKING FORM JAVASCRIPT -->
-    <script>
+<script>
+    function sendBooking(event) {
+        event.preventDefault();
 
-        function sendBooking(event) {
+        const name = document.getElementById("customerName").value.trim();
+        const phone = document.getElementById("customerPhone").value.trim();
+        const pickup = document.getElementById("pickup").value.trim();
+        const destination = document.getElementById("destination").value.trim();
+        const date = document.getElementById("travelDate").value;
+        const passengers = document.getElementById("passengers").value;
+        const message = document.getElementById("travelMessage").value.trim();
 
-            event.preventDefault();
+        const bookingMessage =
+            "Hello SUMANA TRAVELS! I would like to make a travel enquiry.\n\n" +
+            "Name: " + name + "\n" +
+            "Phone: " + phone + "\n" +
+            "Pickup Location: " + pickup + "\n" +
+            "Destination: " + destination + "\n" +
+            "Travel Date: " + date + "\n" +
+            "Passengers: " + passengers + "\n" +
+            "Additional Requirements: " + message;
 
-            const name =
-                document.getElementById("customerName").value.trim();
+        const whatsappURL =
+            "https://wa.me/917207131929?text=" + encodeURIComponent(bookingMessage);
 
-            const phone =
-                document.getElementById("customerPhone").value.trim();
+        window.open(whatsappURL, "_blank");
+    }
 
-            const pickup =
-                document.getElementById("pickup").value.trim();
+    function showPlaces(city) {
+        const details = document.getElementById("destination-details");
 
-            const destination =
-                document.getElementById("destination").value.trim();
+        const destinations = {
+            bangalore: {
+                name: "Places to Visit in Bangalore",
+                places: [
+                    "Lalbagh Botanical Garden",
+                    "Cubbon Park",
+                    "Bangalore Palace",
+                    "Nandi Hills",
+                    "Wonderla"
+                ]
+            },
+            chennai: {
+                name: "Places to Visit in Chennai",
+                places: [
+                    "Marina Beach",
+                    "Kapaleeshwarar Temple",
+                    "Santhome Basilica",
+                    "Mahabalipuram",
+                    "VGP Marine Kingdom"
+                ]
+            },
+            tirupati: {
+                name: "Places to Visit in Tirupati",
+                places: [
+                    "Sri Govindaraja Swamy Temple",
+                    "Kapila Theertham",
+                    "ISKCON Temple",
+                    "Sri Venkateswara Zoological Park",
+                    "Srinivasa Mangapuram Temple"
+                ]
+            },
+            tirumala: {
+                name: "Places to Visit in Tirumala",
+                places: [
+                    "Sri Venkateswara Temple",
+                    "Papavinasanam",
+                    "Akasa Ganga",
+                    "Silathoranam",
+                    "Srivari Padalu",
+                    "Japali Hanuman Temple"
+                ]
+            }
+        };
 
-            const date =
-                document.getElementById("travelDate").value;
+        const selected = destinations[city];
 
-            const passengers =document.getElementById("passengers").value;
+        if (!selected) return;
 
-            const message =
-                document.getElementById("travelMessage").value.trim();
+        const placesList = selected.places
+            .map(place => <li>${place}</li>)
+            .join("");
 
-            const bookingMessage =
-                "Hello SUMANA TRAVELS! I would like to make a travel enquiry.%0A%0A" +
-                "Name: " + encodeURIComponent(name) + "%0A" +
-                "Phone: " + encodeURIComponent(phone) + "%0A" +
-                "Pickup Location: " + encodeURIComponent(pickup) + "%0A" +
-                "Destination: " + encodeURIComponent(destination) + "%0A" +
-                "Travel Date: " + encodeURIComponent(date) + "%0A" +
-                "Passengers: " + encodeURIComponent(passengers) + "%0A" +
-                "Additional Requirements: " + encodeURIComponent(message);
+        const message = encodeURIComponent(
+            "Hello SUMANA TRAVELS, I would like to book a trip to " +
+            city.charAt(0).toUpperCase() + city.slice(1) + "."
+        );
 
-            const whatsappURL =
-                "https://wa.me/917207131929?text=" + bookingMessage;
+        details.innerHTML = `
+            <div class="destination-details-card">
+                <h3>${selected.name}</h3>
+                <ul>${placesList}</ul>
+                <a href="https://wa.me/917207131929?text=${message}"
+                   target="_blank" rel="noopener">
+                    Book This Trip on WhatsApp
+                </a>
+            </div>
+        `;
 
-            window.open(whatsappURL, "_blank");
-
-        }
-        <script>
-        function showPlaces(city) {
-    const details = document.getElementById("destination-details");
-
-    const destinations = {
-        bangalore: {
-            name: "Places to Visit in Bangalore",
-            places: [
-                "Lalbagh Botanical Garden",
-                "Cubbon Park",
-                "Bangalore Palace",
-                "Nandi Hills",
-                "Wonderla"
-            ]
-        },
-
-        chennai: {
-            name: "Places to Visit in Chennai",
-            places: [
-                "Marina Beach",
-                "Kapaleeshwarar Temple",
-                "Santhome Basilica",
-                "Mahabalipuram",
-                "VGP Marine Kingdom"
-            ]
-        },
-
-        tirupati: {
-            name: "Places to Visit in Tirupati",
-            places: [
-                "Sri Govindaraja Swamy Temple",
-                "Kapila Theertham",
-                "ISKCON Temple",
-                "Sri Venkateswara Zoological Park",
-                "Srinivasa Mangapuram Temple"
-            ]
-        },
-
-        tirumala: {
-            name: "Places to Visit in Tirumala",
-            places: [
-                "Sri Venkateswara Temple",
-                "Papavinasanam",
-                "Akasa Ganga",
-                "Silathoranam",
-                "Srivari Padalu",
-                "Japali Hanuman Temple"
-            ]
-        }
-    };
-
-    const selected = destinations[city];
-
-    if (!selected) return;
-
-    const placesList = selected.places
-        .map(place => <li>${place}</li>)
-        .join("");
-
-    const message = encodeURIComponent(
-        "Hello SUMANA TRAVELS, I would like to book a trip to " +
-        city.charAt(0).toUpperCase() + city.slice(1) + "."
-    );
-
-    details.innerHTML = `
-        <div class="destination-details-card">
-            <h3>${selected.name}</h3>
-            <ul>${placesList}</ul>
-            <a href="https://wa.me/917207131929?text=${message}"
-               target="_blank" rel="noopener">
-                Book This Trip on WhatsApp
-            </a>
-        </div>
-    `;
-
-    details.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
-}
-        
-    </script>
-
+        details.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+</script>
 </body>
-
+</html>
 </html>
