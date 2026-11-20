@@ -1191,7 +1191,7 @@ button,
     .temple-photo-card img {
         height: 220px;
     }
-}
+
 /* FIX GALLERY BOOKING TEXT COLORS */
 
 .gallery-booking h3 {
@@ -1236,6 +1236,7 @@ button,
         row-gap: 30px !important;
         gap: 30px !important;
     }
+}
 /* DESTINATION DETAILS */
 .destination-details-card {
     background: #ffffff;
@@ -1296,4 +1297,40 @@ button,
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
     text-align: center;
+}
+/* FOUR CLICKABLE DESTINATION CARDS */
+
+#destinations .destination-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+#destinations .destination-card {
+    cursor: pointer;
+    border: 1px solid #e5eaf0;
+    border-bottom: 4px solid #d4a437;
+    transition: 0.3s ease;
+}
+
+#destinations .destination-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(16, 42, 67, 0.16);
+}
+
+#destinations .destination-card span {
+    display: inline-block;
+    margin: 0 18px 20px;
+    padding: 9px 18px;
+    background: #102a43;
+    color: #ffffff;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    #destinations .destination-container {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
 }
