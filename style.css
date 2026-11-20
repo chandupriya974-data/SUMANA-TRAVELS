@@ -1192,3 +1192,17 @@ button,
         height: 220px;
     }
 }
+/* FIX GALLERY BOOKING TEXT COLORS */
+
+.gallery-booking h3 {
+    color: #FFD166 !important;
+}
+
+.gallery-booking p {
+    color: #FFFFFF !important;
+}
+
+.gallery-booking a {
+    background: #FFD166 !important;
+    color: #102A43 !important;
+}
