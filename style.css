@@ -1220,3 +1220,12 @@ button,
     background: #FFD166 !important;
     color: #102A43 !important;
 }
+/* ADD SPACE BETWEEN GALLERY PHOTOS */
+
+.temple-gallery-container {
+    gap: 25px !important;
+}
+
+.temple-photo-card {
+    margin-bottom: 10px;
+}
