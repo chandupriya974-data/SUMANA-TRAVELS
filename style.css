@@ -1201,7 +1201,21 @@ button,
 .gallery-booking p {
     color: #FFFFFF !important;
 }
+/* CUSTOMER COMMITMENT CHECKMARKS */
 
+#testimonials .stars {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: #fff3d6;
+    color: #b8860b;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
 .gallery-booking a {
     background: #FFD166 !important;
     color: #102A43 !important;
