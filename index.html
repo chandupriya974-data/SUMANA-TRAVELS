@@ -801,7 +801,7 @@
             if (!selected || !details) return;
 
             const placesList = selected.places
-                .map(place => '<li>${place}</li>')
+                .map(place => "<li>" + place + "</li>")
                 .join("");
 
             const message = encodeURIComponent(
