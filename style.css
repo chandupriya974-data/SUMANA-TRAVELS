@@ -1229,3 +1229,15 @@ button,
 .temple-photo-card {
     margin-bottom: 10px;
 }
+/* EXTRA SPACING FOR MOBILE GALLERY */
+
+@media (max-width: 600px) {
+    #temple-gallery .temple-gallery-container {
+        row-gap: 30px !important;
+        gap: 30px !important;
+    }
+
+    #temple-gallery .temple-photo-card {
+        margin-bottom: 25px !important;
+    }
+}
