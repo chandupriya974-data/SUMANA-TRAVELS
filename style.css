@@ -1128,7 +1128,66 @@ button,
     .temple-gallery-container {
         grid-template-columns: 1fr;
     }
+/* =================================
+   GALLERY WHATSAPP BOOKING BUTTON
+================================= */
 
+.gallery-booking {
+    text-align: center;
+    max-width: 850px;
+    margin: 40px auto 20px;
+    padding: 35px 20px;
+    background: linear-gradient(135deg, #102a43, #1769aa);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(16, 42, 67, 0.15);
+}
+
+.gallery-booking h3 {
+    color: #ffffff;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.gallery-booking p {
+    color: #e8f1fa;
+    font-size: 15px;
+    margin-bottom: 22px;
+    line-height: 1.6;
+}
+
+.gallery-booking a {
+    display: inline-block;
+    background: #d4a437;
+    color: #102a43;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.gallery-booking a:hover {
+    background: #ffffff;
+    color: #102a43;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .gallery-booking {
+        margin: 30px 5% 15px;
+        padding: 28px 18px;
+    }
+
+    .gallery-booking h3 {
+        font-size: 21px;
+    }
+
+    .gallery-booking a {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
     .temple-photo-card img {
         height: 220px;
     }
