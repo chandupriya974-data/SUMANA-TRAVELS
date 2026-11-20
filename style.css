@@ -1143,13 +1143,13 @@ button,
 }
 
 .gallery-booking h3 {
-    color: #ffffff;
+    color: #FFD166;
     font-size: 25px;
     margin-bottom: 12px;
 }
 
 .gallery-booking p {
-    color: #e8f1fa;
+    color: #FFFFFF;
     font-size: 15px;
     margin-bottom: 22px;
     line-height: 1.6;
@@ -1157,7 +1157,7 @@ button,
 
 .gallery-booking a {
     display: inline-block;
-    background: #d4a437;
+    background: #FFD166;
     color: #102a43;
     padding: 14px 28px;
     border-radius: 30px;
