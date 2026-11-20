@@ -8,12 +8,13 @@
     <title>SUMANA TRAVELS | Tirupati Travel Services</title>
 
     <meta name="description"
-        content="SUMANA TRAVELS offers comfortable local taxi services, Tirupati temple tours, airport transfers and outstation trips to Chennai and Bangalore.">
+        content="SUMANA TRAVELS offers comfortable taxi services, Tirupati temple tours, airport transfers and outstation trips.">
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
@@ -23,6 +24,7 @@
     <!-- HEADER AND NAVIGATION -->
     <header>
         <div class="navbar">
+
             <div class="logo">
                 <h1>SUMANA TRAVELS</h1>
                 <p>Your Journey, Our Care</p>
@@ -34,20 +36,25 @@
                 <a href="#services">Services</a>
                 <a href="#destinations">Destinations</a>
                 <a href="#temple-gallery">Gallery</a>
-                <a href="#packages">Packages</a>
-                <a href="#contact">Contact</a>
-                <a href="#booking">Book Now</a>
+                <a href="#packages">Travel Packages</a>
+                <a href="#testimonials">Customer Experience</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#booking">Booking Form</a>
             </nav>
+
         </div>
     </header>
+
 
     <!-- BANNER IMAGE -->
     <section class="hero">
         <img src="sumana-banner.jpeg" alt="SUMANA TRAVELS travel banner">
     </section>
 
+
     <!-- HOME SECTION -->
     <section class="home-section" id="home">
+
         <span class="section-tag">WELCOME TO SUMANA TRAVELS</span>
 
         <h2>Your Journey Begins With Comfort and Care</h2>
@@ -63,19 +70,25 @@
         </p>
 
         <div class="hero-buttons">
+
             <button onclick="window.location.href='tel:7207131929'">
                 Call Now
             </button>
 
-            <button onclick="window.open('https://wa.me/917207131929','_blank')">
+            <button onclick="openWhatsApp('Hello SUMANA TRAVELS, I would like to enquire about a trip.')">
                 Book on WhatsApp
             </button>
+
         </div>
+
     </section>
+
 
     <!-- ABOUT US SECTION -->
     <section id="about">
+
         <div class="about-container">
+
             <div class="about-content">
 
                 <span class="section-tag">ABOUT OUR COMPANY</span>
@@ -109,23 +122,31 @@
                     <li>Family and group travel enquiries</li>
                     <li>Easy phone and WhatsApp booking</li>
                     <li>Customer-focused travel assistance</li>
+                         <li>Customer-focused travel assistance</li>
                 </ul>
 
                 <button onclick="window.location.href='tel:7207131929'">
                     Contact Us
                 </button>
+
             </div>
 
             <div class="about-image">
+
                 <img
                     src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800"
                     alt="Beautiful travel destination">
+
             </div>
+
         </div>
+
     </section>
+
 
     <!-- SERVICES SECTION -->
     <section id="services">
+
         <span class="section-tag">WHAT WE OFFER</span>
 
         <h2>Our Travel Services</h2>
@@ -185,7 +206,9 @@
             </div>
 
         </div>
+
     </section>
+
 
     <!-- DESTINATIONS SECTION -->
     <section id="destinations">
@@ -195,65 +218,141 @@
         <h2>Explore Places to Visit</h2>
 
         <p>
-            Choose your destination and discover
-            beautiful places with SUMANA TRAVELS.
+            Choose your destination and discover beautiful places
+            with SUMANA TRAVELS.
         </p>
+ <div class="destination-container">
 
-        <div class="destination-container">
+            <div class="destination-card"
+                onclick="showPlaces('bangalore')">
 
-            <div class="destination-card" onclick="showPlaces('bangalore')">
-                <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=600"
+                <img
+                    src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=600"
                     alt="Bangalore">
+
                 <h3>Bangalore</h3>
                 <p>Discover the Garden City.</p>
                 <span>Explore Places →</span>
+
             </div>
 
-            <div class="destination-card" onclick="showPlaces('chennai')">
-                <img src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?w=600"
+
+            <div class="destination-card"
+                onclick="showPlaces('chennai')">
+
+                <img
+                    src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?w=600"
                     alt="Chennai">
+
                 <h3>Chennai</h3>
                 <p>Explore the beauty of Chennai.</p>
                 <span>Explore Places →</span>
+
             </div>
 
-            <div class="destination-card" onclick="showPlaces('tirupati')">
-                <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600"
+
+            <div class="destination-card"
+                onclick="showPlaces('tirupati')">
+
+                <img
+                    src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600"
                     alt="Tirupati">
+
                 <h3>Tirupati</h3>
                 <p>Discover temples and attractions.</p>
                 <span>Explore Places →</span>
+
             </div>
 
-            <div class="destination-card" onclick="showPlaces('tirumala')">
-                <img src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?w=600"
+
+            <div class="destination-card"
+                onclick="showPlaces('tirumala')">
+
+                <img
+                    src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?w=600"
                     alt="Tirumala">
+
                 <h3>Tirumala</h3>
                 <p>Experience a spiritual journey.</p>
                 <span>Explore Places →</span>
+
             </div>
 
         </div>
 
+        <!-- DESTINATION DETAILS APPEAR HERE -->
         <div id="destination-details"></div>
 
     </section>
 
-    <!-- GALLERY BOOKING BUTTON -->
-    <div class="gallery-booking">
-        <h3>Planning Your Next Journey?</h3>
-        <p>Travel comfortably with SUMANA TRAVELS. Contact us today!</p>
 
-        <a href="https://wa.me/917207131929?text=Hello%20SUMANA%20TRAVELS%2C%20I%20would%20like%20to%20book%20a%20trip."
-            target="_blank" rel="noopener">
-            Book Your Trip on WhatsApp
-        </a>
-    </div>
+    <!-- TEMPLE TOUR PHOTO GALLERY -->
+    <section id="temple-gallery">
+
+        <span class="section-tag">EXPLORE OUR GALLERY</span>
+
+        <h2>Temple Tour & Travel Gallery</h2>
+
+        <p class="gallery-subtitle">
+            Discover beautiful spiritual destinations and memorable journeys.
+        </p>
+
+        <div class="gallery-container">
+
+            <div class="gallery-item">
+                <img
+                    src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=700"
+                    alt="Tirupati Temple">
+                <h3>Tirupati Temple</h3>
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?w=700"
+                    alt="Tirumala">
+                <h3>Tirumala</h3>
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=700"
+                    alt="Beautiful destination">
+                <h3>Nature & Travel</h3>
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?w=700"
+                    alt="Chennai travel">
+                    <h3>Chennai</h3>
+            </div>
+
+        </div>
+
+        <div class="gallery-booking">
+
+            <h3>Planning Your Next Journey?</h3>
+
+            <p>
+                Travel comfortably with SUMANA TRAVELS.
+                Contact us today!
+            </p>
+
+            <a href="https://wa.me/917207131929?text=Hello%20SUMANA%20TRAVELS%2C%20I%20would%20like%20to%20book%20a%20trip."
+                target="_blank" rel="noopener">
+                Book Your Trip on WhatsApp
+            </a>
+
+        </div>
+
+    </section>
+
 
     <!-- CUSTOMER EXPERIENCE SECTION -->
     <section id="testimonials">
 
         <span class="section-tag">OUR COMMITMENT</span>
+
         <h2>Why Travellers Choose Us</h2>
 
         <p class="testimonial-subtitle">
@@ -284,12 +383,15 @@
             </div>
 
         </div>
+
     </section>
 
-    <!-- SPECIAL TRAVEL PACKAGES -->
+
+    <!-- TRAVEL PACKAGES SECTION -->
     <section id="packages">
 
         <span class="section-tag">PLAN YOUR JOURNEY</span>
+
         <h2>Our Travel Packages</h2>
 
         <p class="packages-subtitle">
@@ -299,67 +401,103 @@
         <div class="packages-container">
 
             <div class="package-card">
+
                 <img
                     src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600"
                     alt="Tirupati Darshan">
+
                 <h3>Tirupati Darshan</h3>
+
                 <p>Plan a convenient journey to Tirupati and explore its spiritual attractions.</p>
-                <a href="https://wa.me/917207131929?text=Hello%20Sumana%20Travels%2C%20I%20want%20to%20enquire%20about%20Tirupati%20Darshan.">
-                   Enquire Now
+
+                <a href="https://wa.me/917207131929?text=Hello%20SUMANA%20TRAVELS%2C%20I%20want%20to%20enquire%20about%20Tirupati%20Darshan."
+                    target="_blank">
+                    Enquire Now
                 </a>
+
             </div>
 
+
             <div class="package-card">
+
                 <img
                     src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?w=600"
                     alt="Tirumala Tour">
+
                 <h3>Tirumala Temple Tour</h3>
+
                 <p>Plan a peaceful and convenient journey to Tirumala.</p>
-                <a href="https://wa.me/917207131929?text=Hello%20Sumana%20Travels%2C%20I%20want%20to%20enquire%20about%20Tirumala%20Tour.">
+ <a href="https://wa.me/917207131929?text=Hello%20SUMANA%20TRAVELS%2C%20I%20want%20to%20enquire%20about%20Tirumala%20Tour."
+                    target="_blank">
                     Enquire Now
                 </a>
+
             </div>
 
+
             <div class="package-card">
+
                 <img
                     src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600"
                     alt="Kanipakam Tour">
+
                 <h3>Kanipakam Tour</h3>
+
                 <p>Enquire about a visit to the famous Vinayaka Temple.</p>
-                <a href="https://wa.me/917207131929?text=Hello%20Sumana%20Travels%2C%20I%20want%20to%20enquire%20about%20Kanipakam%20Tour.">
+
+                <a href="https://wa.me/917207131929?text=Hello%20SUMANA%20TRAVELS%2C%20I%20want%20to%20enquire%20about%20Kanipakam%20Tour."
+                    target="_blank">
                     Enquire Now
                 </a>
+
             </div>
 
+
             <div class="package-card">
+
                 <img
                     src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?w=600"
                     alt="Chennai Trip">
+
                 <h3>Chennai Trip</h3>
+
                 <p>Enquire about outstation travel between Tirupati and Chennai.</p>
-                <a href="https://wa.me/917207131929?text=Hello%20Sumana%20Travels%2C%20I%20want%20to%20enquire%20about%20Chennai%20Trip.">
+
+                <a href="https://wa.me/917207131929?text=Hello%20SUMANA%20TRAVELS%2C%20I%20want%20to%20enquire%20about%20Chennai%20Trip."
+                    target="_blank">
                     Enquire Now
                 </a>
+
             </div>
 
+
             <div class="package-card">
+
                 <img
                     src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=600"
                     alt="Bangalore Trip">
+
                 <h3>Bangalore Trip</h3>
+
                 <p>Enquire about outstation travel between Tirupati and Bangalore.</p>
-                <a href="https://wa.me/917207131929?text=Hello%20Sumana%20Travels%2C%20I%20want%20to%20enquire%20about%20Bangalore%20Trip.">
+
+                <a href="https://wa.me/917207131929?text=Hello%20SUMANA%20TRAVELS%2C%20I%20want%20to%20enquire%20about%20Bangalore%20Trip."
+                    target="_blank">
                     Enquire Now
                 </a>
+
             </div>
 
         </div>
+
     </section>
 
-    <!-- BOOKING SECTION -->
+
+    <!-- BOOKING FORM -->
     <section id="booking">
 
         <span class="section-tag">RESERVE YOUR JOURNEY</span>
+
         <h2>Book Your Journey</h2>
 
         <p class="booking-subtitle">
@@ -372,26 +510,38 @@
             <form onsubmit="sendBooking(event)">
 
                 <label for="customerName">Your Name</label>
+
                 <input type="text" id="customerName"
                     placeholder="Enter your full name" required>
 
+
                 <label for="customerPhone">Phone Number</label>
+
                 <input type="tel" id="customerPhone"
                     placeholder="Enter your phone number"
                     pattern="[0-9]{10}" maxlength="10" required>
-                    <label for="pickup">Pickup Location</label>
+
+
+                <label for="pickup">Pickup Location</label>
+
                 <input type="text" id="pickup"
                     placeholder="Enter pickup location" required>
 
+
                 <label for="destination">Destination</label>
-                <input type="text" id="destination"
+<input type="text" id="destination"
                     placeholder="Enter your destination" required>
 
+
                 <label for="travelDate">Travel Date</label>
+
                 <input type="date" id="travelDate" required>
 
+
                 <label for="passengers">Number of Passengers</label>
+
                 <select id="passengers" required>
+
                     <option value="">Select passengers</option>
                     <option value="1">1 Passenger</option>
                     <option value="2">2 Passengers</option>
@@ -400,77 +550,112 @@
                     <option value="5">5 Passengers</option>
                     <option value="6">6 Passengers</option>
                     <option value="7 or more">7 or more Passengers</option>
+
                 </select>
 
+
                 <label for="travelMessage">Additional Requirements</label>
+
                 <textarea id="travelMessage"
                     placeholder="Tell us any additional travel requirements"></textarea>
+
 
                 <button type="submit">
                     Send Booking Enquiry on WhatsApp
                 </button>
 
             </form>
+
         </div>
+
     </section>
+
 
     <!-- CONTACT SECTION -->
     <section id="contact">
 
         <span class="section-tag">GET IN TOUCH</span>
+
         <h2>Contact SUMANA TRAVELS</h2>
 
-        <p>Planning your next journey? Contact us for travel enquiries.</p>
+        <p>
+            Planning your next journey? Contact us for travel enquiries.
+        </p>
 
         <div class="contact-container">
 
             <div class="contact-card">
+
                 <div class="service-icon">📞</div>
+
                 <h3>Call Us</h3>
+
                 <p>Speak to us about your travel requirements.</p>
+
                 <a href="tel:7207131929">7207131929</a>
+
             </div>
 
+
             <div class="contact-card">
+
                 <div class="service-icon">💬</div>
+
                 <h3>WhatsApp</h3>
+
                 <p>Send us your travel enquiry on WhatsApp.</p>
+
                 <a href="https://wa.me/917207131929" target="_blank">
                     Chat With Us
                 </a>
+
             </div>
 
+
             <div class="contact-card">
+
                 <div class="service-icon">📍</div>
+
                 <h3>Our Location</h3>
+
                 <p>Tirupati, Andhra Pradesh</p>
+
                 <a href="https://www.google.com/maps/search/?api=1&query=Tirupati%2C+Andhra+Pradesh"
                     target="_blank" rel="noopener">
                     View on Google Maps
                 </a>
+
             </div>
 
         </div>
+
     </section>
+
 
     <!-- FOOTER -->
     <footer>
 
         <h2>SUMANA TRAVELS</h2>
+
         <p>Your Journey, Our Care</p>
 
         <div class="footer-links">
+
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
-             <a href="#destinations">Destinations</a>
+            <a href="#destinations">Destinations</a>
             <a href="#temple-gallery">Gallery</a>
-            <a href="#contact">Contact</a>
-            <a href="#booking">Book Now</a>
+            <a href="#packages">Travel Packages</a>
+             <a href="#testimonials">Customer Experience</a>
+            <a href="#booking">Booking</a>
+            <a href="#contact">Contact Us</a>
+
         </div>
 
         <p>
-            Contact: <a href="tel:7207131929">7207131929</a>
+            Contact:
+            <a href="tel:7207131929">7207131929</a>
         </p>
 
         <p>
@@ -494,29 +679,59 @@
 
     </footer>
 
+
     <!-- FLOATING WHATSAPP BUTTON -->
     <a
         href="https://wa.me/917207131929"
         class="whatsapp-float"
         target="_blank"
+        rel="noopener"
         aria-label="Chat with SUMANA TRAVELS on WhatsApp">
         💬
     </a>
 
+
     <!-- ALL JAVASCRIPT -->
     <script>
 
+        // WHATSAPP FUNCTION
+        function openWhatsApp(message) {
+
+            const url =
+                "https://wa.me/917207131929?text=" +
+                encodeURIComponent(message);
+
+            window.open(url, "_blank");
+
+        }
+
+
         // BOOKING FORM FUNCTION
         function sendBooking(event) {
+
             event.preventDefault();
 
-            const name = document.getElementById("customerName").value.trim();
-            const phone = document.getElementById("customerPhone").value.trim();
-            const pickup = document.getElementById("pickup").value.trim();
-            const destination = document.getElementById("destination").value.trim();
-            const date = document.getElementById("travelDate").value;
-            const passengers = document.getElementById("passengers").value;
-            const message = document.getElementById("travelMessage").value.trim();
+            const name =
+                document.getElementById("customerName").value.trim();
+
+            const phone =
+                document.getElementById("customerPhone").value.trim();
+
+            const pickup =
+                document.getElementById("pickup").value.trim();
+
+            const destination =
+                document.getElementById("destination").value.trim();
+
+            const date =
+                document.getElementById("travelDate").value;
+
+            const passengers =
+                document.getElementById("passengers").value;
+
+            const message =
+                document.getElementById("travelMessage").value.trim();
+
 
             const bookingMessage =
                 "Hello SUMANA TRAVELS! I would like to make a travel enquiry.\n\n" +
@@ -528,187 +743,262 @@
                 "Passengers: " + passengers + "\n" +
                 "Additional Requirements: " + message;
 
-            const whatsappURL =
-                "https://wa.me/917207131929?text=" +
-                encodeURIComponent(bookingMessage);
 
-            window.open(whatsappURL, "_blank");
+            openWhatsApp(bookingMessage);
+
         }
 
-       // DESTINATION PLACES FUNCTION
-function showPlaces(city) {
 
-    const details = document.getElementById("destination-details");
+        // DESTINATION PLACES DATA
+        const destinations = {
 
-    const destinations = {
+            // BANGALORE
+            bangalore: {
 
-       bangalore: {
-    name: "Places to Visit in Bangalore",
-    places: [
-        {
-            name: "Lalbagh Botanical Garden",
-            description: "Explore beautiful gardens and nature.",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Lalbagh_Glass_House.jpg/800px-Lalbagh_Glass_House.jpg"
-        },
-        {
-            name: "Cubbon Park",
-            description: "Enjoy greenery and peaceful surroundings.",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Cubbon_Park_Bangalore.jpg/800px-Cubbon_Park_Bangalore.jpg"
-        },
-        {
-            name: "Bangalore Palace",
-            description: "Discover royal architecture and history.",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Bangalore_Palace.jpg/800px-Bangalore_Palace.jpg"
-        },
-        {
-            name: "Nandi Hills",
-            description: "Enjoy beautiful hills and scenic views.",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Nandi_Hills.jpg/800px-Nandi_Hills.jpg"
-        },
-        {
-            name: "Wonderla",
-            description: "Enjoy exciting rides and water attractions.",
-            image: "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?w=600"
+                name: "Places to Visit in Bangalore",
+
+                places: [
+
+                    {
+                        name: "Lalbagh Botanical Garden",
+                        description: "Explore beautiful gardens and nature.",
+                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Lalbagh_Glass_House.jpg/800px-Lalbagh_Glass_House.jpg"
+                    },
+
+                    {
+                        name: "Cubbon Park",
+                        description: "Enjoy greenery and peaceful surroundings.",
+                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Cubbon_Park_Bangalore.jpg/800px-Cubbon_Park_Bangalore.jpg"
+                    },
+
+                    {
+                        name: "Bangalore Palace",
+                        description: "Discover royal architecture and history.",
+                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Bangalore_Palace.jpg/800px-Bangalore_Palace.jpg"
+                    },
+
+                    {
+                        name: "Nandi Hills",
+                        description: "Enjoy beautiful hills and scenic views.",
+                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Nandi_Hills.jpg/800px-Nandi_Hills.jpg"
+                    },
+
+                    {
+                        name: "Wonderla",
+                        description: "Enjoy exciting rides and water attractions.",
+                        image: "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?w=600"
+                    }
+
+                ]
+
+            },
+
+
+            // CHENNAI
+            chennai: {
+
+                name: "Places to Visit in Chennai",
+
+                places: [
+
+                    {
+                        name: "Marina Beach",
+                        description: "Enjoy Chennai's famous coastline and sea views.",
+                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Chennai_Marina_beach.jpg/800px-Chennai_Marina_beach.jpg"
+                    },
+
+                    {
+                        name: "Kapaleeshwarar Temple",
+                        description: "Explore beautiful Dravidian temple architecture.",
+                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Chennai%27s_Kapaleeshwarar_Temple.jpg/800px-Chennai%27s_Kapaleeshwarar_Temple.jpg"
+                    },
+
+                    {
+                        name: "Santhome Basilica",
+                        description: "Visit the historic church near Marina Beach.",
+                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Santhome_Basilica.jpg/800px-Santhome_Basilica.jpg"
+                    },
+
+                    {
+                        name: "Mahabalipuram",
+                        description: "Discover ancient stone temples and monuments.",
+                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Shore_Temple_Mahabalipuram.jpg/800px-Shore_Temple_Mahabalipuram.jpg"
+                    },
+
+                    {
+                        name: "VGP Marine Kingdom",
+                        description: "Explore an exciting underwater marine world.",
+                        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Marine_Kingdom.jpg/800px-Marine_Kingdom.jpg"
+                    }
+
+                ]
+
+            },
+ // TIRUPATI
+            tirupati: {
+
+                name: "Places to Visit in Tirupati",
+
+                places: [
+
+                    {
+                        name: "Sri Govindaraja Swamy Temple",
+                        description: "Visit the historic temple in the heart of Tirupati.",
+                        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Govindaraja%20Swamy%20Temple%20-%20Tirupati%20%284%29.jpg"
+                    },
+
+                    {
+                        name: "Kapila Theertham",
+                        description: "Discover the sacred temple and waterfall.",
+                        image: "https://commons.wikimedia.org/wiki/Special:FilePath/KapilaTheertham.jpg"
+                    },
+
+                    {
+                        name: "ISKCON Temple",
+                        description: "Experience a peaceful spiritual atmosphere.",
+                        image: "https://commons.wikimedia.org/wiki/Special:FilePath/ISKCON%20Tirupathi.jpg"
+                    },
+
+                    {
+                        name: "Sri Venkateswara Zoological Park",
+                        description: "Explore wildlife and natural surroundings.",
+                        image: "https://commons.wikimedia.org/wiki/Special:FilePath/White%20tiger%20sri%20venkateswara%20zoological%20park%20tirupati.jpg"
+                    },
+
+                    {
+                        name: "Srinivasa Mangapuram Temple",
+                        description: "Visit the famous Kalyana Venkateswara Temple.",
+                        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Srinivasamangapuram%20Temple%20Tirupati.jpg"
+                    }
+
+                ]
+
+            },
+
+
+            // TIRUMALA
+            tirumala: {
+
+                name: "Places to Visit in Tirumala",
+
+                places: [
+
+                    {
+                        name: "Sri Venkateswara Temple",
+                        description: "Visit the famous Lord Venkateswara Temple.",
+                        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Tirumala%20Venkateswara%20Temple.jpg"
+                    },
+
+                    {
+                        name: "Papavinasanam",
+                        description: "Discover sacred water and peaceful surroundings.",
+                        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Papavinasam%20Tirumala.jpg"
+                    },
+
+                    {
+                        name: "Akasa Ganga",
+                        description: "Explore the sacred waterfall in Tirumala.",
+                        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Akasa%20Ganga%20Tirumala.jpg"
+                    },
+
+                    {
+                        name: "Silathoranam",
+                        description: "See the famous natural rock arch.",
+                        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Silathoranam%20Tirumala.jpg"
+                    },
+
+                    {
+                           name: "Srivari Padalu",
+                        description: "Visit the sacred viewpoint on the hills.",
+                        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Srivari%20Padalu%20Tirumala.jpg"
+                    },
+
+                    {
+                        name: "Japali Hanuman Temple",
+                        description: "Experience a peaceful spiritual visit.",
+                        image: "https://commons.wikimedia.org/wiki/Special:FilePath/Japali%20Hanuman%20Temple.jpg"
+                    }
+
+                ]
+
+            }
+
+        };
+
+
+        // DISPLAY DESTINATION PLACES
+        function showPlaces(city) {
+
+            const details =
+                document.getElementById("destination-details");
+
+            const selected = destinations[city];
+
+            if (!selected || !details) {
+                return;
+            }
+
+
+            const placesList = selected.places.map(place => `
+
+                <div class="place-card">
+
+                    <img src="${place.image}" alt="${place.name}" loading="lazy">
+
+                    <div class="place-info">
+
+                        <h4>${place.name}</h4>
+
+                        <p>${place.description}</p>
+
+                    </div>
+
+                </div>
+
+            `).join("");
+
+
+            const message = encodeURIComponent(
+                "Hello SUMANA TRAVELS, I would like to book a trip to " +
+                city.charAt(0).toUpperCase() + city.slice(1) + "."
+            );
+
+
+            details.innerHTML = `
+
+                <div class="destination-details-card">
+
+                    <h3>${selected.name}</h3>
+
+                    <div class="places-grid">
+
+                        ${placesList}
+
+                    </div>
+
+                    <a href="https://wa.me/917207131929?text=${message}"
+                       target="_blank"
+                       rel="noopener">
+
+                        Book This Trip on WhatsApp
+
+                    </a>
+
+                </div>
+
+            `;
+
+
+            details.scrollIntoView({
+
+                behavior: "smooth",
+                block: "start"
+
+            });
+
         }
-    ]
-},
 
-       chennai: {
-    name: "Places to Visit in Chennai",
-    places: [
-        {
-            name: "Marina Beach",
-            description: "Enjoy Chennai's famous coastline and beautiful sea views.",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Chennai_Marina_beach.jpg/800px-Chennai_Marina_beach.jpg"
-        },
-        {
-            name: "Kapaleeshwarar Temple",
-            description: "Explore the beautiful Dravidian temple architecture.",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Chennai%27s_Kapaleeshwarar_Temple.jpg/800px-Chennai%27s_Kapaleeshwarar_Temple.jpg"
-        },
-        {
-            name: "Santhome Basilica",
-            description: "Visit the historic church near Marina Beach.",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Santhome_Basilica.jpg/800px-Santhome_Basilica.jpg"
-        },
-        {
-            name: "Mahabalipuram",
-            description: "Discover ancient stone temples and monuments.",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Shore_Temple_Mahabalipuram.jpg/800px-Shore_Temple_Mahabalipuram.jpg"
-        },
-        {
-            name: "VGP Marine Kingdom",
-            description: "Explore an exciting underwater marine world.",
-            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Marine_Kingdom.jpg/800px-Marine_Kingdom.jpg"
-        }
-    ]
-},
-       tirupati: {
-    name: "Places to Visit in Tirupati",
-    places: [
-        {
-            name: "Sri Govindaraja Swamy Temple",
-            description: "Visit the historic temple in the heart of Tirupati.",
-            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Govindaraja%20Swamy%20Temple%20-%20Tirupati%20%284%29.jpg"
-        },
-        {
-            name: "Kapila Theertham",
-            description: "Discover the sacred temple and waterfall.",
-            image: "https://commons.wikimedia.org/wiki/Special:FilePath/KapilaTheertham.jpg"
-        },
-        {
-            name: "ISKCON Temple",
-            description: "Experience a peaceful spiritual atmosphere.",
-            image: "https://commons.wikimedia.org/wiki/Special:FilePath/ISKCON%20Tirupathi.jpg"
-        },
-        {
-            name: "Sri Venkateswara Zoological Park",
-            description: "Explore wildlife and beautiful natural surroundings.",
-            image: "https://commons.wikimedia.org/wiki/Special:FilePath/White%20tiger%20sri%20venkateswara%20zoological%20park%20tirupati.jpg"
-        },
-        {
-            name: "Srinivasa Mangapuram Temple",
-            description: "Visit the famous Kalyana Venkateswara Temple.",
-            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Srinivasamangapuram%20Temple%20Tirupati.jpg"
-        }
-    ]
-},
-        tirumala: {
-    name: "Places to Visit in Tirumala",
-    places: [
-        {
-            name: "Sri Venkateswara Temple",
-            description: "Visit the famous Lord Venkateswara Temple.",
-            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Tirumala%20Venkateswara%20Temple.jpg"
-        },
-        {
-            name: "Papavinasanam",
-            description: "Discover the sacred water and peaceful surroundings.",
-            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Papavinasam%20Tirumala.jpg"
-        },
-        {
-            name: "Akasa Ganga",
-            description: "Explore the sacred waterfall in Tirumala.",
-            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Akasa%20Ganga%20Tirumala.jpg"
-        },
-        {
-            name: "Silathoranam",
-            description: "See the famous natural rock arch.",
-            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Silathoranam%20Tirumala.jpg"
-        },
-        {
-            name: "Srivari Padalu",
-            description: "Visit the sacred viewpoint on the hills.",
-            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Srivari%20Padalu%20Tirumala.jpg"
-        },
-        {
-            name: "Japali Hanuman Temple",
-            description: "Experience a peaceful spiritual visit.",
-            image: "https://commons.wikimedia.org/wiki/Special:FilePath/Japali%20Hanuman%20Temple.jpg"
-        }
-    ]
-}
-    const selected = destinations[city];
-
-    if (!selected || !details) return;
-
-    const placesList = selected.places.map(place => `
-        <div class="place-card">
-            <img src="${place.image}" alt="${place.name}">
-            <div class="place-info">
-                <h4>${place.name}</h4>
-                <p>${place.description}</p>
-            </div>
-        </div>
-    `).join("");
-
-    const message = encodeURIComponent(
-        "Hello SUMANA TRAVELS, I would like to book a trip to " +
-        city.charAt(0).toUpperCase() + city.slice(1) + "."
-    );
-
-    details.innerHTML = `
-        <div class="destination-details-card">
-            <h3>${selected.name}</h3>
-
-            <div class="places-grid">
-                ${placesList}
-            </div>
-
-            <a href="https://wa.me/917207131929?text=${message}"
-               target="_blank" rel="noopener">
-                Book This Trip on WhatsApp
-            </a>
-        </div>
-    `;
-
-    details.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
-}
-
-</script>
+    </script>
 
 </body>
 </html>
