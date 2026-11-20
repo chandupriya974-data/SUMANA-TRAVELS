@@ -1288,3 +1288,12 @@ button,
         margin-bottom: 25px !important;
     }
 }
+.destination-details-card {
+    background: #ffffff;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 850px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
