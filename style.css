@@ -780,7 +780,7 @@ footer a {
     nav a {
         font-size: 11px;
     }
-
+}
     .hero img {
         height: 220px;
         object-fit: cover;
@@ -1103,7 +1103,7 @@ button,
 .temple-photo-card a {
     color: #1769aa;
 }
-
+}
 /* MOBILE RESPONSIVE */
 
 @media (max-width: 768px) {
@@ -1120,6 +1120,7 @@ button,
     #temple-gallery {
         padding: 45px 5%;
     }
+}
 
     #temple-gallery h2 {
         font-size: 25px;
@@ -1174,7 +1175,7 @@ button,
 }
 
 @media (max-width: 600px) {
-    .gallery-booking {
+    .gallery-booking 
         margin: 30px 5% 15px;
         padding: 28px 18px;
     }
@@ -1187,7 +1188,6 @@ button,
         padding: 12px 20px;
         font-size: 14px;
     }
-}
     .temple-photo-card img {
         height: 220px;
     }
@@ -1288,7 +1288,6 @@ button,
     #temple-gallery .temple-photo-card {
         margin-bottom: 25px !important;
     }
-}
 .destination-details-card {
     background: #ffffff;
     padding: 30px;
@@ -1342,3 +1341,86 @@ html {
 #booking {
     scroll-margin-top: 100px;
 }
+/* =================================
+   SUMANA TRAVELS - MOBILE IMAGE FIX
+================================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* MOBILE DESTINATION IMAGES */
+
+@media screen and (max-width: 600px) {
+
+    .hero img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+}
+    .about-image img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+    }
+
+    .destination-card img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+    }
+
+    .package-card img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+    }
+
+    .temple-photo-card img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+    }
+
+    .destination-container,
+    .packages-container,
+    .temple-gallery-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .destination-card,
+    .package-card,
+    .temple-photo-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .explore-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-booking {
+        width: 100%;
+        margin: 25px auto;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+/* TABLET IMAGE SIZES */
+
+@media (min-width: 601px) and (max-width: 1000px) {
+
+    .destination-card img,
+    .package-card img {
+        height: 190px;
+    }
+}
+    .temple-photo-card img {
+        height: 190px;
+    }
