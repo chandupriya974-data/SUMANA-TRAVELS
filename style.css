@@ -780,7 +780,7 @@ footer a {
     nav a {
         font-size: 11px;
     }
-}
+
     .hero img {
         height: 220px;
         object-fit: cover;
@@ -1103,7 +1103,7 @@ button,
 .temple-photo-card a {
     color: #1769aa;
 }
-}
+
 /* MOBILE RESPONSIVE */
 
 @media (max-width: 768px) {
@@ -1120,7 +1120,6 @@ button,
     #temple-gallery {
         padding: 45px 5%;
     }
-}
 
     #temple-gallery h2 {
         font-size: 25px;
@@ -1129,6 +1128,7 @@ button,
     .temple-gallery-container {
         grid-template-columns: 1fr;
     }
+}
 /* =================================
    GALLERY WHATSAPP BOOKING BUTTON
 ================================= */
@@ -1175,7 +1175,7 @@ button,
 }
 
 @media (max-width: 600px) {
-    .gallery-booking 
+    .gallery-booking {
         margin: 30px 5% 15px;
         padding: 28px 18px;
     }
@@ -1191,6 +1191,7 @@ button,
     .temple-photo-card img {
         height: 220px;
     }
+}
 
 /* FIX GALLERY BOOKING TEXT COLORS */
 
@@ -1359,7 +1360,7 @@ img {
         height: 180px;
         object-fit: cover;
     }
-}
+   
     .about-image img {
         width: 100%;
         height: 210px;
@@ -1411,16 +1412,16 @@ img {
     body {
         overflow-x: hidden;
     }
+}
 
 /* TABLET IMAGE SIZES */
 
 @media (min-width: 601px) and (max-width: 1000px) {
 
     .destination-card img,
-    .package-card img {
-        height: 190px;
-    }
-}
+    .package-card img,
     .temple-photo-card img {
         height: 190px;
     }
+}
+   
